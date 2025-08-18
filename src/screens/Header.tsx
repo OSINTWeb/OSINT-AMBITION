@@ -1,17 +1,22 @@
 import { Button } from "../components/ui/button";
 import { useScrollDirection } from "../hooks/useScrollDirection";
+import { useNavigate } from "react-router-dom";
 
 type NavItem = { label: string; href: string };
 
 export function Header({ items }: { items: NavItem[] }) {
 	const direction = useScrollDirection({ threshold: 12, initial: "up" });
 	const isCompact = direction === "down";
+	const navigate = useNavigate();
 
-	function scrollToHash(hash: string) {
-		if (!hash) return;
-		const target = document.querySelector(hash);
-		if (target) {
-			target.scrollIntoView({ behavior: "smooth", block: "start" });
+	function handleNavigation(item: NavItem) {
+		if (item.label === "About") {
+			navigate("/about");
+		} else {
+			const target = document.querySelector(item.href);
+			if (target) {
+				target.scrollIntoView({ behavior: "smooth", block: "start" });
+			}
 		}
 	}
 
@@ -39,7 +44,7 @@ export function Header({ items }: { items: NavItem[] }) {
 							<Button
 								key={index}
 								variant="ghost"
-								onClick={() => scrollToHash(item.href)}
+								onClick={() => handleNavigation(item)}
 								className="h-auto p-0 [font-family:'Inter',Helvetica] font-medium text-white text-[13.3px] leading-[16.8px] whitespace-nowrap hover:bg-transparent"
 							>
 								{item.label}
