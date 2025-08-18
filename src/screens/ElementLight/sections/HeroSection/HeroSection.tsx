@@ -1,5 +1,5 @@
-import React from "react";
 import { Button } from "../../../../components/ui/button";
+import { FadeInUp } from "../../../../components/FadeInUp";
 
 export const HeroSection = (): JSX.Element => {
   const leftColumnText = [
@@ -27,6 +27,7 @@ export const HeroSection = (): JSX.Element => {
     "capabilities of the field and improving the speed, performance and",
     "efficiency.",
   ];
+  const aboutText = leftColumnText.filter((line) => line.trim().length > 0).join(" ");
 
   const workingOnItems = [
     "Educating people about OSINT",
@@ -41,29 +42,26 @@ export const HeroSection = (): JSX.Element => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
         <div className="flex flex-col space-y-6 px-4 lg:px-8 py-8">
           <header className="overflow-hidden">
-            <h1 className="[font-family:'JetBrains_Mono',Helvetica] font-bold text-white text-7xl tracking-[0] leading-[86.4px] whitespace-nowrap">
+            <h1 className="[font-family:'JetBrains_Mono',Helvetica] font-bold text-white text-7xl tracking-[0] leading-[86.4px] max-[360px]:text-[3rem] max-[360px]:leading-[2.4rem]">
               WHO WE ARE
             </h1>
           </header>
 
           <div className="space-y-2">
-            {leftColumnText.map((line, index) => (
-              <p
-                key={index}
-                className="[font-family:'Poppins',Helvetica] font-normal text-zinc-200 text-[15px] tracking-[0] leading-[27px]"
-              >
-                {line}
+            <FadeInUp delayMs={40}>
+              <p className="[font-family:'Poppins',Helvetica] font-normal text-zinc-200 text-[15px] tracking-[0] leading-[27px]">
+                {aboutText}
               </p>
-            ))}
+            </FadeInUp>
           </div>
         </div>
 
         <div className="flex flex-col space-y-6 px-4 lg:px-8 py-8">
           <div
-            className="w-full h-[473px] bg-cover bg-center bg-no-repeat"
+            className="w-full bg-center bg-no-repeat bg-contain aspect-square sm:aspect-[4/3] lg:aspect-[16/9]"
             style={{
               backgroundImage:
-                "url(../image---o65uowwhqru46ifdvliqmyh0ayi-jpeg.png)",
+                "url(/logo/osint_logo.png)",
             }}
           ></div>
 
@@ -75,12 +73,11 @@ export const HeroSection = (): JSX.Element => {
 
               <div className="ml-6 space-y-1">
                 {workingOnItems.map((item, index) => (
-                  <p
-                    key={index}
-                    className="[font-family:'Poppins',Helvetica] font-normal text-zinc-200 text-sm tracking-[0] leading-[25.2px]"
-                  >
-                    {item}
-                  </p>
+                  <FadeInUp key={index} delayMs={index * 60}>
+                    <p className="[font-family:'Poppins',Helvetica] font-normal text-zinc-200 text-sm tracking-[0] leading-[25.2px]">
+                      {item}
+                    </p>
+                  </FadeInUp>
                 ))}
               </div>
             </div>

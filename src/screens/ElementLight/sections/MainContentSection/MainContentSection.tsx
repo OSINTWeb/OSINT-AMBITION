@@ -1,7 +1,8 @@
-import React from "react";
 import { Separator } from "../../../../components/ui/separator";
+import { useInView } from "../../../../hooks/useInView";
 
 export const MainContentSection = (): JSX.Element => {
+  const { ref, inView } = useInView({ threshold: 0.3, once: false });
   const leftNavItems = [
     { label: "Home", fontSize: "text-[13.7px]" },
     { label: "Products", fontSize: "text-[13.5px]" },
@@ -18,11 +19,15 @@ export const MainContentSection = (): JSX.Element => {
 
   return (
     <div className="w-full relative">
-      <div className="w-full max-w-[1440px] mx-auto bg-black">
-        <div className="w-full max-w-[1380px] mx-auto px-[30px] py-px">
-          <div className="flex justify-between max-w-[1035px]">
-            <nav className="w-[518px]">
-              <ul className="space-y-[27px] pt-[19px]">
+      <div
+        ref={ref as unknown as React.RefObject<HTMLDivElement>}
+        className={`w-full max-w-[1440px] mx-auto bg-black transition-all duration-500 ease-out will-change-[opacity,transform]
+        ${inView ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95"}`}
+      >
+        <div className="w-full max-w-[1380px] mx-auto px-4 py-3">
+          <div className="flex justify-between gap-6">
+            <nav className="flex-1 min-w-[220px]">
+              <ul className="space-y-2 pt-2">
                 {leftNavItems.map((item, index) => (
                   <li key={index}>
                     <a
@@ -36,8 +41,8 @@ export const MainContentSection = (): JSX.Element => {
               </ul>
             </nav>
 
-            <nav className="w-[518px]">
-              <ul className="space-y-[27px] pt-[19px]">
+            <nav className="flex-1 min-w-[220px]">
+              <ul className="space-y-2 pt-2">
                 {rightNavItems.map((item, index) => (
                   <li key={index}>
                     <a
@@ -52,10 +57,10 @@ export const MainContentSection = (): JSX.Element => {
             </nav>
           </div>
 
-          <Separator className="w-full h-px mt-[136px] bg-[#222225]" />
+          <Separator className="w-full h-px mt-6 bg-[#222225]" />
 
-          <footer className="w-full h-[74px] bg-transparent">
-            <div className="flex justify-between items-center pt-[17px]">
+          <footer className="w-full bg-transparent">
+            <div className="flex justify-between items-center py-3">
               <div className="[font-family:'Inter',Helvetica] font-normal text-white text-[28px] tracking-[0] leading-[33.6px]">
                 OSINT AMBITION
               </div>

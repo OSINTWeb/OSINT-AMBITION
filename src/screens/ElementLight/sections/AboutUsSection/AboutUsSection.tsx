@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Avatar,
   AvatarFallback,
@@ -10,12 +9,12 @@ export const AboutUsSection = (): JSX.Element => {
   const profileData = {
     name: "Dheeraj Yadav",
     title: "CEO @OSINTAMBITION",
-    avatar: "/image---79vyojmil6oq7ajzcecjufbkhiq-png.png",
+    avatar: "/profile/dheeraj.png",
   };
 
   return (
-    <section className="relative w-full h-[840px] bg-black overflow-hidden">
-      <div className="relative h-full border-t border-[#222225] bg-[url(/image-wrapper---image---dwny1a03p2eg8wdfbslv57uo0kw-jpg.png)] bg-cover bg-center">
+    <section className="top-0 bottom-0 z-20 w-full h-[100vh] bg-black overflow-hidden mt-[100px]">
+      <div className="relative h-full border-t border-[#222225] bg-[url(/footer/footer.png)] bg-cover bg-center">
         <div className="flex flex-col items-center justify-center h-full px-4">
           <div className="max-w-[1116px] mx-auto text-center">
             <div className="mb-12">

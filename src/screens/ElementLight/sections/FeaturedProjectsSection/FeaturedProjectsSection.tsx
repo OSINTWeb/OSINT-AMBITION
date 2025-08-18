@@ -1,5 +1,4 @@
 import { ExternalLinkIcon } from "lucide-react";
-import React from "react";
 import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
 
@@ -10,7 +9,7 @@ const projectsData = [
     title: "Profiler.Me",
     description:
       "Profiler.me is an OSINT (Open Source Intelligence) platform designed to gather, analyze, and visualize publicly available information about individuals and entities - all in one clean, automated dashboard.",
-    image: "/image-wrapper---image---cykdj0uwj6e1djoktc5f7705ly-png.png",
+    image: "/project/profiler_tool.png",
     gridClass: "col-span-1",
   },
   {
@@ -19,7 +18,7 @@ const projectsData = [
     title: "OSINT Updates",
     description:
       "OSINT Updates is your go-to newsletter and content feed that keeps you informed about everything happening in the world of Open Source Intelligence (OSINT).",
-    image: "/image-wrapper---image---btkd1fkjbei9wxtjahby0iqqzl8-png.png",
+    image: "/project/news.png",
     gridClass: "col-span-1",
   },
   {
@@ -28,7 +27,7 @@ const projectsData = [
     title: "OSINTCon",
     description:
       "OSINTCon (Open Source Intelligence Conference) is a global, fully online, and 100% free conference dedicated to the field of Open Source Intelligence (OSINT).",
-    image: "/image-wrapper---image---c3gqvb9mgzmbt3ykzabtirre-png.png",
+    image: "/project/conf.png",
     gridClass: "col-span-2",
   },
   {
@@ -37,7 +36,7 @@ const projectsData = [
     title: "OSINT India",
     description:
       "Explore deep dives, tool breakdowns, and expert-written OSINT insights curated to sharpen your intelligence game. Stay updated on trends, techniques, and real-world applications in open-source investigations.",
-    image: "/image-wrapper---image---wqsxhxzecjcdo0hrkgvhqao34-png.png",
+    image: "/project/blogs.png",
     gridClass: "col-span-1",
   },
   {
@@ -46,7 +45,7 @@ const projectsData = [
     title: "Forum",
     description:
       "The OSINT Ambition Forum is an upcoming community-driven discussion platform - designed to bring together OSINT enthusiasts, professionals, and learners from around the world.",
-    image: "/image-wrapper---image---fzkyqepo54g89nvtc15ob6bk5qq-png.png",
+    image: "/project/fourm.png",
     gridClass: "col-span-1",
   },
 ];
@@ -54,23 +53,23 @@ const projectsData = [
 export const FeaturedProjectsSection = (): JSX.Element => {
   return (
     <section className="w-full relative">
-      <div className="max-w-[1380px] mx-auto px-[30px]">
-        <header className="h-24 relative mb-24">
+      <div className="max-w-[1380px] mx-auto px-[30px] max-[360px]:px-4">
+        <header className="h-24 relative">
           <div className="h-full border-t border-[#222225]" />
           <h2 className="absolute top-7 left-0 [font-family:'Inter',Helvetica] font-normal text-white text-[29px] tracking-[0] leading-[36.5px] whitespace-nowrap">
             Ongoing Projects
           </h2>
         </header>
 
-        <div className="grid grid-cols-2 gap-[30px] auto-rows-max">
+        <div className="grid grid-cols-2 max-[360px]:grid-cols-1 gap-[30px] max-[360px]:gap-4 auto-rows-max">
           {projectsData.map((project) => (
             <Card
               key={project.id}
-              className={`${project.gridClass} bg-transparent border-none overflow-hidden group cursor-pointer`}
+              className={`${project.gridClass} max-[360px]:col-span-1 bg-transparent border-none overflow-hidden group cursor-pointer`}
             >
               <CardContent className="p-0 relative">
                 <div
-                  className="w-full h-[469px] bg-cover bg-center bg-no-repeat"
+                  className={`w-full bg-contain bg-center bg-no-repeat aspect-[16/9] max-[360px]:aspect-[4/3]`}
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
 
