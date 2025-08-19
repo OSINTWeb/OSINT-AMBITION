@@ -1,4 +1,5 @@
 import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
+import SEO from "../../components/SEO";
 import { FeaturedProjectsSection } from "./sections/FeaturedProjectsSection/FeaturedProjectsSection";
 import { HeroSection } from "./sections/HeroSection/HeroSection";
 import { IntroductionSection } from "./sections/IntroductionSection/IntroductionSection";
@@ -17,6 +18,12 @@ const navigationItems = [
 export const ElementLight = (): JSX.Element => {
   return (
     <div className="relative w-full bg-black max-[480px]:overflow-x-hidden">
+      <SEO
+        title="Home"
+        description="Explore OSINT tools, community projects, and resources to learn, collaborate, and apply Open Source Intelligence."
+        canonical="https://osintambition.org/"
+        imageUrl="https://osintambition.org/logo/osint_logo.png"
+      />
       {/* Desktop Header (hidden on mobile) */}
       <div className="hidden min-[760px]:block">
         <Header items={navigationItems} />

@@ -7,6 +7,7 @@ import { CollaborationSection } from "./CollaborationSection/CollaborationSectio
 import { Header } from "../../../Header";
 import { MobileHeader } from "../../../../components/mobile/MobileHeader";
 import { MainContentSection } from "../MainContentSection/MainContentSection";
+import SEO from "../../../../components/SEO";
 
 export const AboutPage = (): JSX.Element => {
   const navItems = [
@@ -18,6 +19,12 @@ export const AboutPage = (): JSX.Element => {
 
   return (
     <div className="w-full min-h-screen bg-black">
+      <SEO
+        title="About"
+        description="Learn about OSINT Ambition's mission to make Open Source Intelligence accessible worldwide through collaboration, education, and open tools."
+        canonical="https://osintambition.org/about"
+        imageUrl="https://osintambition.org/logo/osint_logo.png"
+      />
       <div className="w-full bg-black overflow-hidden">
         {/* Desktop Header (hidden on mobile) */}
         <div className="hidden min-[760px]:block">

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block common private or build paths (none by default)
+
+Sitemap: https://osintambition.org/sitemap.xml
+
+

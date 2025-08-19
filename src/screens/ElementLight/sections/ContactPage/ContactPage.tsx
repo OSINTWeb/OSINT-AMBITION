@@ -1,6 +1,7 @@
 import { Header } from "../../../Header";
 import { MobileHeader } from "../../../../components/mobile/MobileHeader";
 import { MainContentSection } from "../MainContentSection/MainContentSection";
+import SEO from "../../../../components/SEO";
 
 export const ContactPage = (): JSX.Element => {
   const navItems = [
@@ -12,6 +13,12 @@ export const ContactPage = (): JSX.Element => {
 
   return (
     <div className="w-full min-h-screen bg-black flex flex-col max-[480px]:overflow-x-hidden max-[480px]:mt-[-120px]">
+      <SEO
+        title="Contact"
+        description="Contact OSINT Ambition for collaborations, partnerships, and inquiries about OSINT solutions."
+        canonical="https://osintambition.org/contact"
+        imageUrl="https://osintambition.org/logo/osint_logo.png"
+      />
       <div className="w-full bg-black overflow-hidden flex-1">
         {/* Desktop Header (hidden on mobile) */}
         <div className="hidden min-[760px]:block">
