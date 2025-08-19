@@ -1,6 +1,6 @@
 export const MissionSection = (): JSX.Element => {
   return (
-    <section className="w-full relative h-screen flex items-center justify-center">
+    <section className="w-full relative h-[50vh] flex items-center justify-center">
       <div className="max-w-5xl text-center px-8">
         <p 
           style={{

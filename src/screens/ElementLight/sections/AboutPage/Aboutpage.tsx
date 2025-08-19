@@ -10,8 +10,10 @@ import { MainContentSection } from "../MainContentSection/MainContentSection";
 
 export const AboutPage = (): JSX.Element => {
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
+    { label: "Products", href: "#products" },
+  { label: "Contact", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Forum", href: "#forum" },
   ];
 
   return (

@@ -16,7 +16,7 @@ export const CollaborationSection = (): JSX.Element => {
               fontWeight: 400,
               letterSpacing: '0em',
               lineHeight: '1.2em',
-              textAlign: 'start',
+              textAlign: 'center',
               color: '#fff',
               textDecoration: 'none',
               textTransform: 'none'
@@ -28,21 +28,23 @@ export const CollaborationSection = (): JSX.Element => {
       </div>
 
       {/* Bottom content aligned to each other */}
-      <div className="flex items-center justify-start max-w-[1440px] w-full px-[30px] pt-[60px] gap-5 relative z-[1] mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16 w-full">
+      <div className="flex items-center justify-start max-w-[1440px] w-full px-[30px] pt-[30px] gap-5 relative z-[1] mx-auto">
+        <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between gap-8 lg:gap-16 w-full">
           <div className="flex flex-col space-y-6">
             <h2 className="[font-family:'Inter',Helvetica] font-normal text-white text-[29.1px] tracking-[0] leading-[36.5px] max-w-[530px]">
               Want to Work with our Amazing Team?
             </h2>
 
             <div className="relative">
+              <a href="/contact">
               <Button
                 variant="ghost"
-                className="h-auto p-0 text-white hover:text-white/80 [font-family:'Inter',Helvetica] font-medium text-[18.6px] tracking-[0] leading-6"
-              >
-                Contact Us
-              </Button>
-              <div className="absolute bottom-0 left-0 w-28 h-px bg-white mt-2" />
+                className="h-auto p-0 text-white [font-family:'Inter',Helvetica] font-medium text-[18.6px] tracking-[0] leading-6"
+                >
+                  Contact Us
+                </Button>
+              </a>
+              <div className="absolute bottom-0 left-0 w-28 mt-2" />
             </div>
           </div>
 
@@ -51,8 +53,7 @@ export const CollaborationSection = (): JSX.Element => {
               At OSINT Ambition, we cultivate a collaborative and knowledge-driven
               environment where <br />
               OSINT professionals and enthusiasts come together. Join us and be
-              part of India&apos;s growing <br />
-              OSINT community!
+              part of India&apos;s growing OSINT community
             </p>
           </div>
         </div>

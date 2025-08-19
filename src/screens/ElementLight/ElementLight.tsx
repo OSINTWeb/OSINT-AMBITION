@@ -9,13 +9,14 @@ import { MobileHeader } from "../../components/mobile";
 
 const navigationItems = [
   { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
+  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/about" },
   { label: "Forum", href: "#forum" },
 ];
 
 export const ElementLight = (): JSX.Element => {
   return (
-    <div className="relative w-full bg-black overflow-x-hidden">
+    <div className="relative w-full bg-black">
       {/* Desktop Header (hidden on mobile) */}
       <div className="hidden min-[760px]:block">
         <Header items={navigationItems} />

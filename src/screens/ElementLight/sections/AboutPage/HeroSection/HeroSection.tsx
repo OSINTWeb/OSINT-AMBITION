@@ -1,7 +1,8 @@
 export const HeroSection = (): JSX.Element => {
   return (
     <section className="w-full relative h-screen flex items-center justify-center">
-      <div className="max-w-6xl text-center px-4">
+      <div className="absolute inset-0 bg-[#8f3811]" />
+      <div className="relative z-10 max-w-6xl text-center px-4">
         <h1 
           style={{
             fontFamily: '"Switzer", "Switzer Placeholder", sans-serif',

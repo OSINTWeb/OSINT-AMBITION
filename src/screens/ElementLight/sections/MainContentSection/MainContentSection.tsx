@@ -4,17 +4,17 @@ import { useInView } from "../../../../hooks/useInView";
 export const MainContentSection = (): JSX.Element => {
   const { ref, inView } = useInView({ threshold: 0.3, once: false });
   const leftNavItems = [
-    { label: "Home", fontSize: "text-[13.7px]" },
+    { label: "Home", fontSize: "text-[13.7px]", href: "/" },
     { label: "Products", fontSize: "text-[13.5px]" },
-    { label: "About", fontSize: "text-[13.3px]" },
-    { label: "Contact", fontSize: "text-[13.2px]" },
+    { label: "About", fontSize: "text-[13.3px]", href: "/about" },
+    { label: "Contact", fontSize: "text-[13.2px]", href: "/contact" },
   ];
 
   const rightNavItems = [
-    { label: "LinkedIn", fontSize: "text-[13.5px]" },
-    { label: "X", fontSize: "text-sm" },
-    { label: "Forum", fontSize: "text-[13.9px]" },
-    { label: "YouTube", fontSize: "text-[13.6px]" },
+    { label: "LinkedIn", fontSize: "text-[13.5px]", href: "https://www.linkedin.com/company/osintambition" },
+    { label: "X", fontSize: "text-sm", href: "https://x.com/osintambition" },
+    { label: "Forum", fontSize: "text-[13.9px]", href: "/forum" },
+    { label: "YouTube", fontSize: "text-[13.6px]", href: "https://www.youtube.com/@OSINTAMBITION" },
   ];
 
   return (
@@ -31,7 +31,7 @@ export const MainContentSection = (): JSX.Element => {
                 {leftNavItems.map((item, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                      href={item.href}
                       className={`${item.fontSize} [font-family:'Inter',Helvetica] font-normal text-white tracking-[0] leading-[16.8px] hover:opacity-80 transition-opacity`}
                     >
                       {item.label}
@@ -46,7 +46,7 @@ export const MainContentSection = (): JSX.Element => {
                 {rightNavItems.map((item, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                      href={item.href}
                       className={`${item.fontSize} [font-family:'Inter',Helvetica] font-normal text-white tracking-[0] leading-[16.8px] hover:opacity-80 transition-opacity`}
                     >
                       {item.label}

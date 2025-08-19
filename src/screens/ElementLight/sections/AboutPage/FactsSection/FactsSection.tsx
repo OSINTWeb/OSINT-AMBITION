@@ -56,39 +56,30 @@ export const FactsSection = (): JSX.Element => {
         </div>
 
         <div className="flex justify-center w-full">
-          <div className="max-w-[1440px] w-full px-[30px] mt-[10px] mb-20">
-            <div className="grid grid-cols-3 gap-[10px] max-[480px]:grid-cols-1 max-[480px]:gap-3 max-[480px]:mt-4">
+          <div className="max-w-[1440px] w-full px-[30px] mt-[30px] mb-20">
+            <div className="grid grid-cols-3 md:grid-cols-3 max-[480px]:grid-cols-1 gap-6 md:gap-10 mt-4">
               {statsData.map((stat, index) => (
-                <div key={index} className="flex flex-col">
-                  <Card className="bg-transparent border-none w-full">
-                    <CardContent className="p-0 flex flex-col items-start justify-start max-[480px]:pb-2">
-                      <div className="text-white">
-                        <div className="[font-family:'Inter',Helvetica] font-normal text-white text-[41.6px] tracking-[0] leading-[49.9px] mb-7 max-[480px]:text-[28px] max-[480px]:mb-2">
-                          {stat.number}
-                        </div>
-
-                        <div className="mt-[101px] max-[480px]:mt-2">
-                          <h3 className="[font-family:'Inter',Helvetica] font-normal text-white text-[23.1px] tracking-[0] leading-[28.8px] mb-2 max-[480px]:text-[18px] max-[480px]:mb-1">
-                            {stat.title}
-                          </h3>
-
-                          <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[15.1px] tracking-[0] leading-[19.2px] max-w-[430px] max-[480px]:text-[13px] max-[480px]:leading-[18px]">
-                            {stat.description}
-                          </p>
-                        </div>
+                <Card key={index} className="w-full bg-white/5 border border-white/10 rounded-xl hover:border-white/20 transition-colors">
+                  <CardContent className="p-6 md:p-7">
+                    <div className="flex flex-col">
+                      <div className="[font-family:'Inter',Helvetica] text-4xl md:text-5xl font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+                        {stat.number}
                       </div>
-                    </CardContent>
-                  </Card>
-                  
-                  {/* Separator line between stats items (only on mobile) */}
-                  {index < statsData.length - 1 && (
-                    <Separator className="max-[480px]:block min-[480px]:hidden mt-3 mb-3 bg-[#222225]" />
-                  )}
-                </div>
+                      <div className="mt-5">
+                        <h3 className="[font-family:'Inter',Helvetica] text-white text-lg md:text-xl font-medium mb-2">
+                          {stat.title}
+                        </h3>
+                        <p className="[font-family:'Inter',Helvetica] text-zinc-300 text-sm leading-relaxed max-w-[460px]">
+                          {stat.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
-            
-            <Separator className="mt-8 bg-[#222225]" />
+
+            <Separator className="mt-10 bg-[#222225]" />
           </div>
         </div>
       </div>

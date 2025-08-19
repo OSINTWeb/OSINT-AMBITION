@@ -12,6 +12,8 @@ export const AboutUsSection = (): JSX.Element => {
     avatar: "/profile/dheeraj.png",
   };
 
+  const contactLink = "https://cal.com/@dheerajydv19"
+
   return (
     <section className="top-0 bottom-0 z-20 w-full h-[100vh] bg-black overflow-hidden mt-[100px]">
       <div className="relative h-full border-t border-[#222225] bg-[url(/footer/footer.png)] bg-cover bg-center">
@@ -33,9 +35,9 @@ export const AboutUsSection = (): JSX.Element => {
                 className="h-auto p-0 hover:bg-transparent group"
               >
                 <div className="flex flex-col items-center gap-2">
-                  <span className="[font-family:'Inter',Helvetica] font-medium text-white text-[18.9px] leading-6">
+                  <a href={contactLink} className="[font-family:'Inter',Helvetica] font-medium text-white text-[18.9px] leading-6">
                     Let's work together
-                  </span>
+                  </a>
                   <div className="w-[188px] h-px bg-white group-hover:bg-gray-300 transition-colors" />
                 </div>
               </Button>
