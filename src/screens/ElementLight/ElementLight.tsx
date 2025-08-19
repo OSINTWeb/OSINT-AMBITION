@@ -16,7 +16,7 @@ const navigationItems = [
 
 export const ElementLight = (): JSX.Element => {
   return (
-    <div className="relative w-full bg-black">
+    <div className="relative w-full bg-black max-[480px]:overflow-x-hidden">
       {/* Desktop Header (hidden on mobile) */}
       <div className="hidden min-[760px]:block">
         <Header items={navigationItems} />
@@ -44,7 +44,7 @@ export const ElementLight = (): JSX.Element => {
           <div className="absolute inset-0 bg-[url(/hsatf7kpduhyxd9kyq2mo6z0lg-mp4.png)] bg-cover bg-[50%_50%] z-10" />
           {/* Centered Heading above everything */}
           <div className="absolute inset-0 z-20 flex items-center justify-center">
-            <div className="w-[50.375rem] text-center">
+            <div className="w-full max-w-[50.375rem] text-center px-4">
               <h1 className="[font-family:'Inter',Helvetica] font-normal text-white text-[2.48125rem] tracking-[0] max-[360px]:leading-[3rem] mix-blend-difference">
                 A Place Where OSINT meets Curiosity
               </h1>

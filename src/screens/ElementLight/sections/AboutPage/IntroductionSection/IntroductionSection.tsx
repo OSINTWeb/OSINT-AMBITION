@@ -1,4 +1,3 @@
-import { Separator } from "../../../../../components/ui/separator";
 import { Card, CardContent } from "../../../../../components/ui/card";
 
 const sectionData = [

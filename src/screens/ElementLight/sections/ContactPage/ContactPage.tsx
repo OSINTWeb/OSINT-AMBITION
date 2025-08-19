@@ -11,7 +11,7 @@ export const ContactPage = (): JSX.Element => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-black flex flex-col">
+    <div className="w-full min-h-screen bg-black flex flex-col max-[480px]:overflow-x-hidden max-[480px]:mt-[-120px]">
       <div className="w-full bg-black overflow-hidden flex-1">
         {/* Desktop Header (hidden on mobile) */}
         <div className="hidden min-[760px]:block">

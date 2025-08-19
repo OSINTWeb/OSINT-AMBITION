@@ -51,7 +51,7 @@ export function MobileHeader({ items }: MobileHeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black w-full overflow-x-hidden">
       <div className="w-full">
         <nav className="hidden min-[760px]:flex w-full py-3">
           <div className="w-full mx-auto px-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
@@ -75,8 +75,8 @@ export function MobileHeader({ items }: MobileHeaderProps) {
         </nav>
 
         {/* Mobile Header - Below 760px */}
-        <nav className="min-[760px]:hidden w-full max-w-[100vw] px-3 py-3">
-          <div className="flex items-center justify-between w-full px-0">
+        <nav className="min-[760px]:hidden w-full max-w-full px-3 py-3">
+          <div className="flex items-center justify-between w-full px-0 overflow-hidden gap-2 min-w-0">
             <div className="[font-family:'Inter',Helvetica] font-semibold text-white text-base truncate max-w-[70%]">
               OSINT Ambition
             </div>
